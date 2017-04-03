@@ -1,0 +1,8 @@
+title: C2
+description: some sort algorithm
+google_analytics: some sort algorithm about improve buble
+show_downloads: true
+theme: jekyll-theme-dinky
+
+gems:
+  - jekyll-mentions
