@@ -8,19 +8,19 @@
 
 下面是最常用的冒泡排序算法：    
 ```c
-void Swap(int &a,int &b)  //c++的写法
+void Swap(int &a, int &b)  //c++的写法
 {
- 　　　　a^=b;
-	b^=a;
-	a^=b;
-	return;
+        a^=b;
+        b^=a;
+        a^=b;
+        return;
 }
 
 
-void BubleSort(int*a,int len)
+void BubleSort(int *a, int len)
 {　　
-    　int i = 0;
-    　int j = 0;　　　　
+        int i = 0;
+    　  int j = 0;　　　　
 
 	for(i=0;i<len-1;++i)
 	{
@@ -43,25 +43,25 @@ void BubleSort(int*a,int len)
 稍微有想法的就不会这么写了：  
 
 ```c
-void BubleSort(int*a,int len)
+void BubleSort(int *a, int len)
 {　　　　　　　
-　　int flag = 0;　　
-    int i = 0;
-    int j = 0;　　　　　
+　　    int flag = 0;　　
+        int i = 0;
+        int j = 0;　　　　　
 
 	for(i = 0; i < len-1; ++i)
 	{       
-                flag =0;
+                flag =1;
 		for(j = 0; j < len-i-1; ++j)
 		{
 			if(a[j] > a[j+1])
 			{
 				Swap(a[j],　a[j+1]);
-　　　　　　　　flag = 1;
+　　　　　　　　                 flag = 0;
 			}
 		}
 
-　　　　if(flag) return;
+　　　　        if(flag) return;
 	}
 }
 ```
@@ -74,9 +74,9 @@ void BubleSort(int*a,int len)
 还有一种写法，其实我感觉就是上面的一种再次升级的写法吧：    
 
 ```c
-void BubleSort(int*a, int len)
+void BubleSort(int *a, int len)
 {　　　　　　　
-　　　　int k = 0;　　
+　　　　 int k = 0;　　
         int i = 0;
         int j = 0;　　　　　
 
@@ -88,7 +88,7 @@ void BubleSort(int*a, int len)
 			if(a[j] > a[j+1])
 			{
 				Swap(a[j],　a[j+1]);
-                 k = j;
+                                k = j;
 			}
 		}
 
